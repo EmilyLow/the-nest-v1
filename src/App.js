@@ -1,18 +1,23 @@
 import logo from './images/origami_bird_icon.svg';
 import './App.css';
-
-//remove
 import sampleData from "./sampleData";
+import Stub from "./Stub";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={sampleData[0].imgSrc} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
        
         <h1>The Nest</h1>
-  
+
+       
       </header>
+      {console.log(sampleData)}
+      {sampleData.map((datum) => {
+          return <Stub datum={datum}/>
+        })}
+      
     </div>
   );
 }
