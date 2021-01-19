@@ -3,22 +3,43 @@ import './App.css';
 import sampleData from "./sampleData";
 import Stub from "./Stub";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-       
-        <h1>The Nest</h1>
+import {Typography, Paper, Grid} from '@material-ui/core'
+import {makeStyles} from '@material-ui/core/styles';
 
+const useStyles = makeStyles({
+  testStyle: {
+    fontStyle: 'oblique',
+    fontSize: "80px"
+  },
+  testStyle2: {
+    fontSize: "20px"
+  }
+});
+
+function App() {
+  const classes = useStyles();
+  return (
+    <Grid container direction="column">
+      <Grid container item direction="row" >
+        <Grid item>
+          <img src={logo} className="App-logo" alt="logo" />
+        </Grid>
+        <Grid item>
+          <Typography className = {classes.testStyle} variant="h3" align="center" color="primary" gutterBottom>The Nest</Typography>
+        </Grid>
+      </Grid>
+      
        
-      </header>
-      {console.log(sampleData)}
+       
+        
+       
+     
+      {/* {console.log(sampleData)} */}
       {sampleData.map((datum) => {
           return <Stub datum={datum}/>
         })}
       
-    </div>
+    </Grid>
   );
 }
 
