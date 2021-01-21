@@ -18,7 +18,7 @@ let sampleData = [
     }, 
     {
         title: "Bird Hostels",
-        blurb: "Elemetary schools all over the western Europe are creating hideaways for our migratory friends.",
+        blurb: "Elementary schools all over the western Europe are creating hideaways for our migratory friends.",
         author: "Nellie Wilson",
         imgSrc: birdHouse
     }, 

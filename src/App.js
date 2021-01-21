@@ -21,12 +21,15 @@ function App() {
   return (
     <Grid container direction="column">
       <Grid container item direction="row" >
+        <Grid item xs={3}/>
         <Grid item>
           <img src={logo} className="App-logo" alt="logo" />
         </Grid>
+        
         <Grid item>
           <Typography className = {classes.testStyle} variant="h3" align="center" color="primary" gutterBottom>The Nest</Typography>
         </Grid>
+        <Grid item xs={3}/>
       </Grid>
       
        
