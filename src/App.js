@@ -1,7 +1,8 @@
 import logo from './images/origami_bird_icon.svg';
 import './App.css';
-import sampleData from "./sampleData";
-import Stub from "./Stub";
+
+import Header from "./Header";
+import Content from "./Content";
 
 import {Typography, Paper, Grid} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles';
@@ -20,27 +21,17 @@ function App() {
   const classes = useStyles();
   return (
     <Grid container direction="column">
-      <Grid container item direction="row" >
-        <Grid item xs={3}/>
-        <Grid item>
-          <img src={logo} className="App-logo" alt="logo" />
-        </Grid>
-        
-        <Grid item>
-          <Typography className = {classes.testStyle} variant="h3" align="center" color="primary" gutterBottom>The Nest</Typography>
-        </Grid>
-        <Grid item xs={3}/>
-      </Grid>
       
-       
-       
-        
-       
+        {/* <Grid item xs={3}/> */}
+        <Grid item>
+          <Header/>
+        </Grid>
+      
+ 
+     <Grid item container>
+       <Content/>
+     </Grid>
      
-      {/* {console.log(sampleData)} */}
-      {sampleData.map((datum) => {
-          return <Stub datum={datum}/>
-        })}
       
     </Grid>
   );
