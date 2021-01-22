@@ -12,21 +12,11 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 import theme from "./theme";
-// const useStyles = makeStyles(() => ({
-//     root: {
-//        width: 300,
-//        margin: 'auto'
-       
-//       },
-//     imgStyles: {
-       
-//         height: '100%',
-//         width: 200
-//     }
-//   }));
+
 
 const useStyles = makeStyles((theme) => ({
     cardRoot: {
+        //I think the key thing here is flex
       display: 'flex',
     },
     details: {
@@ -48,17 +38,7 @@ function Stub(props) {
     const classes = useStyles();
 
     return (
-        // <Card variant="outlined" classname={classes.root}>
-        //     <CardMedia className={classes.imgStyles} image={props.datum.imgSrc} title="bird" />
-        //     {/* <CardMedia style = {{ height: 0, paddingTop: '10%'}} image={props.datum.imgSrc} title="bird" /> */}
-        //     <CardHeader title={props.datum.title}  />
-        //     <CardContent>
-        //         <Typography variant="body2">{props.datum.blurb}</Typography>
-        //         <Typography variant="body2">{props.datum.author}</Typography>
-        //     </CardContent>
-            
-                    
-        // </Card>
+    
         <Card variant="outlined" className={classes.cardRoot}>
         
         <CardMedia
@@ -88,3 +68,30 @@ function Stub(props) {
 
 
 export default Stub;
+
+
+//Failed code, don't understand quite why
+// const useStyles = makeStyles(() => ({
+//     root: {
+//        width: 300,
+//        margin: 'auto'
+       
+//       },
+//     imgStyles: {
+            //Tried a bunch of variations on this
+//         height: '100%',
+//         width: 200
+//     }
+//   }));
+
+// <Card variant="outlined" classname={classes.root}>
+    //     <CardMedia className={classes.imgStyles} image={props.datum.imgSrc} title="bird" />
+      //     {/* <CardMedia style = {{ height: 0, paddingTop: '10%'}} image={props.datum.imgSrc} title="bird" /> */}
+        //     <CardHeader title={props.datum.title}  />
+        //     <CardContent>
+        //         <Typography variant="body2">{props.datum.blurb}</Typography>
+        //         <Typography variant="body2">{props.datum.author}</Typography>
+        //     </CardContent>
+            
+                    
+ // </Card>

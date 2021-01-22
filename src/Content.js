@@ -10,10 +10,10 @@ const Content = () => {
 
 
     return(
-    <Grid container spacing={1} direction="column">
+    <Grid container spacing={0} direction="column">
         {sampleData.map((datum) => {
           return (
-            <Grid> 
+            <Grid item> 
               <Stub datum={datum}/> 
             </Grid>);
         })}

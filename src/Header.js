@@ -8,6 +8,9 @@ const useStyles = makeStyles(() => ({
     typographyStyles: {
         fontStyle: 'oblique',
         fontSize: "80px"
+    },
+    toolBarStyles: {
+      justifyContent: 'center'
     }
   }));
 
@@ -15,7 +18,7 @@ const useStyles = makeStyles(() => ({
     const classes = useStyles();
     return (
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className = {classes.toolBarStyles}>
             <img style={{ height: "100px" }} src={logo} alt="logo" />
           <Typography className={classes.typographyStyles} variant="h3" align="center"  gutterBottom>
             The Nest
