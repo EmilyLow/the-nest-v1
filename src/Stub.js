@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     cardRoot: {
         //I think the key thing here is flex
       display: 'flex',
+      //This is here because image size warps if you go smaller.
+      //Can I fix this by additional text wrapping?
+      minWidth: '900px'
     },
     details: {
       display: 'flex',

@@ -17,6 +17,18 @@ const Content = () => {
               <Stub datum={datum}/> 
             </Grid>);
         })}
+        {sampleData.map((datum) => {
+          return (
+            <Grid item> 
+              <Stub datum={datum}/> 
+            </Grid>);
+        })}
+        {sampleData.map((datum) => {
+          return (
+            <Grid item> 
+              <Stub datum={datum}/> 
+            </Grid>);
+        })}
     </Grid>
     );
 }
