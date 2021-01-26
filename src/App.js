@@ -1,24 +1,39 @@
 import logo from './images/origami_bird_icon.svg';
 import './App.css';
-import sampleData from "./sampleData";
-import Stub from "./Stub";
+
+import Header from "./Header";
+import Content from "./Content";
+
+import {Typography, Paper, Grid} from '@material-ui/core'
+import {makeStyles} from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  testStyle: {
+    fontStyle: 'oblique',
+    fontSize: "80px"
+  },
+  testStyle2: {
+    fontSize: "20px"
+  }
+});
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-       
-        <h1>The Nest</h1>
-
-       
-      </header>
-      {console.log(sampleData)}
-      {sampleData.map((datum) => {
-          return <Stub datum={datum}/>
-        })}
+    <Grid container direction="column">
       
-    </div>
+        {/* <Grid item xs={3}/> */}
+        <Grid item>
+          <Header/>
+        </Grid>
+      
+ 
+     <Grid item container>
+       <Content/>
+     </Grid>
+     
+      
+    </Grid>
   );
 }
 
