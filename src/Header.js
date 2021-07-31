@@ -16,6 +16,7 @@ const useStyles = makeStyles(() => ({
 
   const Header = () => {
     const classes = useStyles();
+    //Line of comments added so there is a change
     return (
       <AppBar position="static">
         <Toolbar className = {classes.toolBarStyles}>
@@ -23,7 +24,7 @@ const useStyles = makeStyles(() => ({
           <Typography className={classes.typographyStyles} variant="h3" align="center"  gutterBottom>
             The Nest
           </Typography>
-    
+          
         </Toolbar>
       </AppBar>
     );

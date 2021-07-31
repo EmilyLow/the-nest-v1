@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   }
 });
 
-function App() {
+function App() {  
   const classes = useStyles();
   return (
     <Grid container direction="column">
